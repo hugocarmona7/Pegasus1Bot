@@ -22,19 +22,20 @@ switch($message)
 
 function enviarmensaje($chatId,$mensaje)
 {
-	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=HTML&text=".urlenconde($mensaje);
+	//$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=HTML&text=".urlenconde($mensaje);
+	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=markdown&text=$message";
 	file_get_contents($url);
 }
 
 function hola($chatId)
 {
-	$mensaje="Hola soy Pegasus Bot";
+	$mensaje="Hola soy *PegasusBot*";
 	enviarmensaje($chatId,$mensaje);
 }
 
 function bienvenida($chatId)
 {
-	$mensaje = "<b>Bienvenido $GLOBALS[name]</b>";
+	$mensaje = "Bienvenido $GLOBALS[name]";
 	enviarmensaje($chatId,$mensaje);
 } 
 

@@ -23,7 +23,7 @@ switch($message)
 function enviarmensaje($chatId,$mensaje)
 {
 	//$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=HTML&text=".urlenconde($mensaje);
-	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=markdown&text=$message";
+	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&text=$message";
 	file_get_contents($url);
 }
 

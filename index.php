@@ -28,7 +28,7 @@ function enviarmensaje($chatId,$mensaje)
 function funcionhola($chatId)
 {
 	$mensaje="Hola soy Pegasus Bot";
-	enviarmensaje($chatId,$mensaje)
+	enviarmensaje($chatId,$mensaje);
 }
 
 ?>

@@ -34,7 +34,7 @@ function hola($chatId)
 
 function bienvenida($chatId)
 {
-	$mensaje = "<b>Bienvenido &GLOBALS[name]</b>";
+	$mensaje = "<b>Bienvenido $GLOBALS[name]</b>";
 	enviarmensaje($chatId,$mensaje);
 } 
 

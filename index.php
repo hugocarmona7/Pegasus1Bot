@@ -8,7 +8,7 @@ $update = json_decode($update, TRUE);
 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
-$name = $update["message"]["chat"]["first_name"];
+//$name = $update["message"]["chat"]["first_name"];
 
 switch($message)
 {
@@ -33,10 +33,10 @@ function hola($chatId)
 	enviarmensaje($chatId,$mensaje);
 }
 
-function bienvenida($chatId)
-{
+//function bienvenida($chatId)
+//{
 	//$mensaje = "Bienvenido $GLOBALS[name]";
 	//enviarmensaje($chatId,$mensaje);
-} 
+//} 
 
 ?>

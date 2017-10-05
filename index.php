@@ -29,7 +29,7 @@ function enviarmensaje($chatId,$mensaje)
 
 function hola($chatId)
 {
-	$mensaje="Hola soy *PegasusBot*";
+	$mensaje="Hola soy PegasusBot";
 	enviarmensaje($chatId,$mensaje);
 }
 

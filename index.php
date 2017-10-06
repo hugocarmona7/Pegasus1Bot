@@ -8,7 +8,7 @@ $update = json_decode($update, TRUE);
 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
-$name = $update["message"]["chat"]["first_name"];
+$firstname = $update["message"]["chat"]["first_name"];
 
 switch($message)
 {
@@ -38,7 +38,7 @@ function funcionhola($chatId)
 
 function funcionnombre($chatId)
 {
-	$mensaje = "Bienvenido ".$name;
+	$mensaje = "Bienvenido $GLOBALS[firstname]";
 	enviarmensaje($chatId,$mensaje);
 }
 

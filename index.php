@@ -12,14 +12,14 @@ $firstname = $update["message"]["from"]["last_name"];
 
 switch($message)
 {
-	case "hola":
-		funcionhola($chatId);
+	case "ID":
+		funcionid($chatId);
 		break;
-	case "nombre":
-		funcionnombre($chatId);
+	case "Soporte":
+		funcionsoporte($chatId);
 		break;	
 	default:
-		noentiendo($chatId);
+		menuprincipal($chatId);
 		break;
 }
 
@@ -30,13 +30,13 @@ function enviarmensaje($chatId,$mensaje)
 	file_get_contents($url);
 }
 
-function funcionhola($chatId)
+function funcionid($chatId)
 {
-	$mensaje="Hola soy *PegasusBot* tu ID es:".$chatId;
+	$mensaje="Hola *ID* es: *".$chatId."*";
 	enviarmensaje($chatId,$mensaje);
 }
 
-function funcionnombre($chatId)
+function funcionsoporte($chatId)
 {
 	$mensaje = "Bienvenido Mr. $GLOBALS[firstname]";
 	enviarmensaje($chatId,$mensaje);
@@ -46,6 +46,13 @@ function noentiendo($chatId)
 {
 	$mensaje = "No te entiendo, puedes repetirlo?";
 	enviarmensaje($chatId,$mensaje);
+}
+
+function menuprincipal($chatId)
+{
+	$tecladoprincipal = 'reply_markup={"keyboard":[["ID"],["Soporte"]],"resize_keyboard":true}'
+	$url = $GLOBALS[website].'/sendmessage?chat_id='.$chatId.'parse_mode=HTML&text='.$message.$tecladoprincipal;
+	file_get_contents($url);
 }
 
 ?>

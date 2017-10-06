@@ -9,6 +9,7 @@ $update = json_decode($update, TRUE);
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
 $name = $update["message"]["chat"]["first_name"];
+
 switch($message)
 {
 	case "hola":
@@ -28,7 +29,7 @@ function enviarmensaje($chatId,$mensaje)
 
 function funcionhola($chatId)
 {
-	$mensaje="Hola soy *PegasusBot*";
+	$mensaje="Hola soy *PegasusBot* tu ID es:".$chatId;
 	enviarmensaje($chatId,$mensaje);
 }
 

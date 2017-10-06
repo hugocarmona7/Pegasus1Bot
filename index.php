@@ -26,19 +26,19 @@ switch($message)
 function enviarmensaje($chatId,$mensaje)
 {
 	
-	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=markdown&text=$mensaje";
+	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=HTML&text=$mensaje";
 	file_get_contents($url);
 }
 
 function funcionid($chatId)
 {
-	$mensaje="Tu *ID* es: *".$chatId."*";
+	$mensaje="Tu *ID* es:%0A<b>".$chatId."</b>";
 	enviarmensaje($chatId,$mensaje);
 }
 
 function funcionsoporte($chatId)
 {
-	$mensaje = "Si requieres ayuda ponte en contacto con support@digitalcomtech.com";
+	$mensaje = "Soporte tecnico:%0Asupport@digitalcomtech.com";
 	enviarmensaje($chatId,$mensaje);
 }
 

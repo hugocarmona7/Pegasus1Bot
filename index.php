@@ -8,7 +8,7 @@ $update = json_decode($update, TRUE);
 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
-$firstname = $update["message"]["from"]["last_name"];
+$lastname = $update["message"]["from"]["last_name"];
 
 switch($message)
 {
@@ -32,13 +32,13 @@ function enviarmensaje($chatId,$mensaje)
 
 function funcionid($chatId)
 {
-	$mensaje="Hola tu *ID* es: *".$chatId."*";
+	$mensaje="Tu *ID* es: \n*".$chatId."*";
 	enviarmensaje($chatId,$mensaje);
 }
 
 function funcionsoporte($chatId)
 {
-	$mensaje = "Bienvenido Mr. $GLOBALS[firstname]";
+	$mensaje = "Si requieres ayuda ponte en contacto con\nsupport@digitalcomtech.com";
 	enviarmensaje($chatId,$mensaje);
 }
 

@@ -8,7 +8,7 @@ $update = json_decode($update, TRUE);
 
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
-$firstname = $update["message"]["from"]["user"]["first_name"];
+$firstname = $update["message"]["chat"]["first_name"];
 
 switch($message)
 {

@@ -13,7 +13,7 @@ $message = $update["message"]["text"];
 switch($message)
 {
 	case "hola":
-		hola($chatId);
+		funcionhola($chatId);
 		break;
 	default:
 		bienvenida($chatId);
@@ -23,11 +23,11 @@ switch($message)
 function enviarmensaje($chatId,$mensaje)
 {
 	
-	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&text=$message";
+	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&text=$mensaje";
 	file_get_contents($url);
 }
 
-function hola($chatId)
+function funcionhola($chatId)
 {
 	$mensaje="Hola soy PegasusBot";
 	enviarmensaje($chatId,$mensaje);

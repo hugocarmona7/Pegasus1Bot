@@ -32,7 +32,7 @@ function enviarmensaje($chatId,$mensaje)
 
 function funcionid($chatId)
 {
-	$mensaje="Tu *ID* es:%0A<b>".$chatId."</b>";
+	$mensaje="Tu <b>ID</b> es:%0A<b>".$chatId."</b>";
 	enviarmensaje($chatId,$mensaje);
 }
 
@@ -50,7 +50,7 @@ function noentiendo($chatId)
 
 function menuprincipal($chatId)
 {
-	$message = "Hola soy <b>Pegasus1Bot</b>%0ATe puedo indicar tu ID";
+	$message = "Hola, soy <b>Pegasus1Bot</b> y te puedo indicar tu ID%0ALo necesitas para que te pueda enviar alertas.";
 	$tecladoprincipal = '&reply_markup={"keyboard":[["ID"],["Soporte"]],"resize_keyboard":true}';
 	$url = $GLOBALS[website].'/sendmessage?chat_id='.$chatId.'&parse_mode=HTML&text='.$message.$tecladoprincipal;
 	file_get_contents($url);

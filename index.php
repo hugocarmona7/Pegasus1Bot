@@ -15,8 +15,11 @@ switch($message)
 	case "hola":
 		funcionhola($chatId);
 		break;
+	case "nombre":
+		funcionnombre($chatId);
+		break;	
 	default:
-		funcionbienvenida($chatId);
+		noentiendo($chatId);
 		break;
 }
 
@@ -33,10 +36,16 @@ function funcionhola($chatId)
 	enviarmensaje($chatId,$mensaje);
 }
 
-function funcionbienvenida($chatId)
+function funcionnombre($chatId)
 {
 	$mensaje = "Bienvenido $GLOBALS[name]";
 	enviarmensaje($chatId,$mensaje);
-} 
+}
+
+function noentiendo($chatId)
+{
+	$mensaje = "No te entiendo, puedes repetirlo?";
+	enviarmensaje($chatId,$mensaje);
+}
 
 ?>

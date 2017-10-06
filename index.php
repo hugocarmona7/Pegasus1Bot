@@ -23,13 +23,13 @@ switch($message)
 function enviarmensaje($chatId,$mensaje)
 {
 	
-	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&text=$mensaje";
+	$url = "$GLOBALS[website]/sendmessage?chat_id=$chatId&parse_mode=markdown&text=$mensaje";
 	file_get_contents($url);
 }
 
 function funcionhola($chatId)
 {
-	$mensaje="Hola soy PegasusBot";
+	$mensaje="Hola soy *PegasusBot*";
 	enviarmensaje($chatId,$mensaje);
 }
 

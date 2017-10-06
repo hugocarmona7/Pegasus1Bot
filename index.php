@@ -16,7 +16,7 @@ switch($message)
 		funcionhola($chatId);
 		break;
 	default:
-		bienvenida($chatId);
+		funcionbienvenida($chatId);
 		break;
 }
 
@@ -33,7 +33,7 @@ function funcionhola($chatId)
 	enviarmensaje($chatId,$mensaje);
 }
 
-function bienvenida($chatId)
+function funcionbienvenida($chatId)
 {
 	$mensaje = "Bienvenido $GLOBALS[name]";
 	enviarmensaje($chatId,$mensaje);

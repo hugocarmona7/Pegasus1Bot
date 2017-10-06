@@ -38,7 +38,7 @@ function funcionhola($chatId)
 
 function funcionnombre($chatId)
 {
-	$mensaje = "Bienvenido ".$firstname;
+	$mensaje = "Bienvenido $GLOBALS[chatId]";
 	enviarmensaje($chatId,$mensaje);
 }
 

@@ -32,7 +32,7 @@ function enviarmensaje($chatId,$mensaje)
 
 function funcionid($chatId)
 {
-	$mensaje="Hola tu *ID* es: ".$chatId;
+	$mensaje="Hola tu *ID* es: *".$chatId."*";
 	enviarmensaje($chatId,$mensaje);
 }
 
